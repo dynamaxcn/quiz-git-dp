@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <TextView
+        style="@style/title_style"
+        android:text="4.恭喜您，设置完成" />
+
+    <CheckBox
+        android:id="@+id/cb_setup4_isopenlostfind"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="打钩开启防盗保护" />
+
+    <TextView
+        android:id="@+id/tv_setup4_losfinddesc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dip"
+      
+        android:gravity="center_vertical"
+        android:text="手机防盗已经关闭" />
+
+    <!-- 4个点 -->
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:orientation="horizontal" >
+
+      <!-- 默认的点 -->
+
+        <View
+            android:layout_width="20dip"
+            android:layout_height="20dip"
+            android:layout_margin="2dip"
+            android:background="@android:drawable/presence_invisible" />
+        <!-- 默认的点 -->
+
+        <View
+            android:layout_width="20dip"
+            android:layout_height="20dip"
+            android:layout_margin="2dip"
+            android:background="@android:drawable/presence_invisible" />
+        <!-- 默认的点 -->
+
+        <View
+            android:layout_width="20dip"
+            android:layout_height="20dip"
+            android:layout_margin="2dip"
+            android:background="@android:drawable/presence_invisible" />
+      <!-- 选中的点 -->
+
+        <View
+            android:layout_width="20dip"
+            android:layout_height="20dip"
+            android:layout_margin="2dip"
+            android:background="@android:drawable/presence_online" />
+        
+    </LinearLayout>
+
+    <!-- 相对布局显示图片和下一个 -->
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+
+        <!-- 图片中间 -->
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:src="@drawable/step_4" />
+
+        <ImageButton
+             android:onClick="nextPage"
+            android:layout_width="60dip"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_margin="5dip"
+            android:background="@drawable/setup_ib_selector"
+            android:src="@drawable/next" />
+        <ImageButton
+             android:onClick="prePage"
+            android:layout_width="60dip"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_margin="5dip"
+            android:background="@drawable/setup_ib_selector"
+            android:src="@drawable/pre" />
+    </RelativeLayout>
+
+</LinearLayout>

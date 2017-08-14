@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res/com.itheima17.mobileguard"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <!-- 头部  标条  扫描 结果 动画 -->
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/blue_bkg"
+        android:orientation="vertical" >
+
+        <TextView
+            style="@style/title_style"
+            android:background="#00000000"
+            android:text="病毒查杀" />
+
+        <FrameLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" >
+
+            <!-- 扫描动画 -->
+
+            <LinearLayout
+                android:id="@+id/ll_antivirus_animatorresult"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal"
+                android:visibility="gone" >
+
+                <!-- left image -->
+
+                <ImageView
+                    android:id="@+id/iv_antivirus_leftimage"
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+                
+                 <!-- right image -->
+
+                <ImageView
+                    android:id="@+id/iv_antivirus_rightimage"
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+            </LinearLayout>
+            <!-- 扫描的结果 -->
+
+            <LinearLayout
+                android:id="@+id/ll_antivirus_scanresult"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                android:visibility="gone" >
+
+                <TextView
+                    android:id="@+id/tv_antivirus_result"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="您的手机很安全，放心使用"
+                    android:textColor="#ffffff"
+                    android:textSize="20sp" />
+
+                <Button
+                    android:id="@+id/bt_antivirus_rescan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dip"
+                    android:background="@drawable/dialog_bt_selector"
+                    android:padding="5dip"
+                    android:text="重新扫描"
+                    android:textColor="#ffffff" />
+            </LinearLayout>
+            <!-- 扫描进度 -->
+
+            <LinearLayout
+                android:id="@+id/ll_antivirus_scanProgress"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:orientation="vertical"
+                android:visibility="gone" >
+
+                <com.github.lzyzsd.circleprogress.CircleProgress
+                    android:id="@+id/pb_antivirus_scanprogress"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_gravity="center_horizontal"
+                    custom:circle_progress="20" />
+
+                <TextView
+                    android:id="@+id/tv_antivirus_scanapps"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:text="正在扫描xxxx"
+                    android:textColor="#ffffff"
+                    android:textSize="18sp" />
+            </LinearLayout>
+        </FrameLayout>
+    </LinearLayout>
+
+    <!-- 扫描结果的显示 -->
+
+    <ScrollView
+        android:id="@+id/scrollView1"
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:fillViewport="true" >
+
+        <LinearLayout
+            android:id="@+id/ll_antivirus_results"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical" >
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

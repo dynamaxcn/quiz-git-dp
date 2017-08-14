@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- 自定义属性 -->
+    <declare-styleable name="SettingCenterItemView">
+        
+        <attr name="bgtype">
+            <enum name="first" value="1" />
+            <enum name="middle" value="2" />
+            <enum name="last" value="3"></enum>
+        </attr>
+        <attr name="desc"  format="string"></attr>
+        <attr name="isToggleShow" format="boolean" />
+    </declare-styleable>
+
+</resources>

@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:itheima="http://schemas.android.com/apk/res/com.itheima17.mobileguard"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    <!-- 标题 -->
+	<TextView style="@style/title_style"
+	    android:text="高级工具"/>
+	
+	<com.itheima17.mobileguard.view.SettingCenterItemView
+	    android:id="@+id/siv_atool_phonelocation"
+	    android:layout_marginTop="20dip"
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+	    itheima:bgtype="first"
+	    itheima:isToggleShow="false"
+	    itheima:desc="电话归属地查询"
+	    />
+	<com.itheima17.mobileguard.view.SettingCenterItemView
+	    android:id="@+id/siv_atool_servicelocation"
+	    
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+	    itheima:bgtype="last"
+	    itheima:isToggleShow="false"
+	    itheima:desc="服务号码查询"
+	    />
+	    
+	
+	<com.itheima17.mobileguard.view.SettingCenterItemView
+	    android:id="@+id/siv_atool_smsbaike"
+	    android:layout_marginTop="20dip"
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+	    itheima:bgtype="first"
+	    itheima:isToggleShow="false"
+	    itheima:desc="短信备份"
+	    />
+	<com.itheima17.mobileguard.view.SettingCenterItemView
+	    android:id="@+id/siv_atool_smsResume"
+	    
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+	    itheima:bgtype="last"
+	    itheima:isToggleShow="false"
+	    itheima:desc="短信还原"
+	    />
+	 <!--显示备份或还原 的进度  -->
+
+	<ProgressBar
+	    android:visibility="gone"
+	    android:id="@+id/pb_atool_progress"
+	    style="?android:attr/progressBarStyleHorizontal"
+	    android:layout_width="fill_parent"
+	    android:layout_marginLeft="5dip"
+	    android:layout_marginRight="5dip"
+	    android:layout_height="wrap_content" />
+	
+	
+	<com.itheima17.mobileguard.view.SettingCenterItemView
+	    android:id="@+id/siv_atool_applock"
+	    android:layout_marginTop="20dip"
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+	    itheima:bgtype="first"
+	    itheima:isToggleShow="false"
+	    itheima:desc="程序锁"
+	    />
+	<com.itheima17.mobileguard.view.SettingCenterItemView
+	    android:id="@+id/siv_atool_watchdogthread"
+	    
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+	    itheima:bgtype="middle"
+	    
+	    itheima:desc="看门狗(thread)"
+	    />
+	<com.itheima17.mobileguard.view.SettingCenterItemView
+	    android:id="@+id/siv_atool_watchdogaccessibility"
+	    
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+	    itheima:bgtype="last"
+	    
+	    itheima:desc="看门狗(accessibility)"
+	    />
+
+</LinearLayout>

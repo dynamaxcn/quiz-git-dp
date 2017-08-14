@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <TextView
+        style="@style/title_style"
+        android:text="1.欢迎使用手机防盗" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="您的手机防盗卫士:" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dip"
+        android:drawableLeft="@drawable/dialog_title_default_icon"
+        android:gravity="center_vertical"
+        android:text="sim卡变更报警" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dip"
+        android:drawableLeft="@drawable/dialog_title_default_icon"
+        android:gravity="center_vertical"
+        android:text="GPS追踪" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dip"
+        android:drawableLeft="@drawable/dialog_title_default_icon"
+        android:gravity="center_vertical"
+        android:text="远程锁屏" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dip"
+        android:drawableLeft="@drawable/dialog_title_default_icon"
+        android:gravity="center_vertical"
+        android:text="远程清除数据" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dip"
+        android:drawableLeft="@drawable/dialog_title_default_icon"
+        android:gravity="center_vertical"
+        android:text="播放报警音乐" />
+    <!-- 4个点 -->
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:orientation="horizontal" >
+
+        <!-- 选中的点 -->
+
+        <View
+            android:layout_width="20dip"
+            android:layout_height="20dip"
+            android:layout_margin="2dip"
+            android:background="@android:drawable/presence_online" />
+        <!-- 默认的点 -->
+
+        <View
+            android:layout_width="20dip"
+            android:layout_height="20dip"
+            android:layout_margin="2dip"
+            android:background="@android:drawable/presence_invisible" />
+        <!-- 默认的点 -->
+
+        <View
+            android:layout_width="20dip"
+            android:layout_height="20dip"
+            android:layout_margin="2dip"
+            android:background="@android:drawable/presence_invisible" />
+        <!-- 默认的点 -->
+
+        <View
+            android:layout_width="20dip"
+            android:layout_height="20dip"
+            android:layout_margin="2dip"
+            android:background="@android:drawable/presence_invisible" />
+    </LinearLayout>
+
+    <!-- 相对布局显示图片和下一个 -->
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+
+        <!-- 图片中间 -->
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:src="@drawable/step_1" />
+        
+        <ImageButton
+            android:onClick="nextPage"
+            android:layout_margin="5dip"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            
+            android:layout_width="60dip"
+            android:layout_height="wrap_content"
+            android:background="@drawable/setup_ib_selector"
+            android:src="@drawable/next" />
+
+    </RelativeLayout>
+
+</LinearLayout>

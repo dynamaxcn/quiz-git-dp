@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.itheima17.mobileguard"
+    android:versionCode="5"
+    android:versionName="西瓜版" >
+
+    <uses-sdk
+        android:minSdkVersion="9"
+        android:targetSdkVersion="18" />
+
+    <instrumentation
+        android:name="android.test.InstrumentationTestRunner"
+        android:targetPackage="com.itheima17.mobileguard" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.MANAGE_ACCOUNTS" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.BIND_ACCESSIBILITY_SERVICE" />
+    <!-- 蓝牙分享所需的权限 -->
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_MOCK_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.SEND_SMS" />
+    <uses-permission android:name="android.permission.RECEIVE_SMS" />
+    <uses-permission android:name="android.permission.READ_SMS" />
+    <uses-permission android:name="android.permission.WRITE_SMS" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.WRITE_CONTACTS" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.PROCESS_OUTGOING_CALLS" />
+    <uses-permission android:name="android.permission.KILL_BACKGROUND_PROCESSES" />
+    <uses-permission android:name="android.permission.GET_PACKAGE_SIZE" />
+    <uses-permission android:name="android.permission.CLEAR_APP_CACHE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <uses-library android:name="android.test.runner" />
+
+        <!-- 第三方 -->
+
+        <activity
+            android:name="com.startapp.android.publish.list3d.List3DActivity"
+            android:theme="@android:style/Theme" />
+        <activity
+            android:name="com.startapp.android.publish.AppWallActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:theme="@android:style/Theme.Translucent" />
+        <activity
+            android:name="com.mob.tools.MobUIShell"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            android:windowSoftInputMode="stateHidden|adjustResize" >
+            <intent-filter>
+                <data android:scheme="tencent100371282" />
+
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.BROWSABLE" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            <!-- 调用新浪原生SDK，需要注册的回调activity -->
+            <intent-filter>
+                <action android:name="com.sina.weibo.sdk.action.ACTION_SDK_REQ_ACTIVITY" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="cn.sharesdk.framework.ShareSDKUIShell"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            android:windowSoftInputMode="stateHidden|adjustResize" >
+            <intent-filter>
+                <data android:scheme="tencent100371282" />
+
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.BROWSABLE" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <!-- 微信分享回调 -->
+        <activity
+            android:name=".wxapi.WXEntryActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+
+        <!-- 易信分享回调 -->
+        <activity
+            android:name=".yxapi.YXEntryActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+
+        <!-- 调用新浪原生SDK，需要注册的回调activity -->
+        <activity
+            android:name="cn.sharesdk.sina.weibo.SinaActivity"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+            <intent-filter>
+                <action android:name="com.sina.weibo.sdk.action.ACTION_SDK_REQ_ACTIVITY" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <!-- 支付宝分享回调 -->
+        <activity
+            android:name=".apshare.ShareEntryActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:exported="true"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+
+        <!-- 第三方 -->
+
+        <activity
+            android:name="com.itheima17.mobileguard.activity.SplashActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.itheima17.mobileguard.activity.CacheClearActivity" >
+        </activity>
+        <activity android:name="com.itheima17.mobileguard.activity.CommonServiceActivity" >
+        </activity>
+        <activity android:name="com.itheima17.mobileguard.activity.AToolActivity" >
+        </activity>
+        <activity android:name="com.itheima17.mobileguard.activity.AntiVirusActivity" >
+        </activity>
+        <activity android:name="com.itheima17.mobileguard.activity.ContactsActivity" >
+        </activity>
+        <activity android:name="com.itheima17.mobileguard.activity.Setup1Activity" >
+        </activity>
+        <activity android:name="com.itheima17.mobileguard.activity.Setup2Activity" >
+        </activity>
+        <activity android:name="com.itheima17.mobileguard.activity.Setup3Activity" >
+        </activity>
+        <activity android:name="com.itheima17.mobileguard.activity.BlackActivity" >
+        </activity>
+        <activity android:name="com.itheima17.mobileguard.activity.Setup4Activity" >
+        </activity>
+        <activity android:name="com.itheima17.mobileguard.activity.CalllogActivity" >
+        </activity>
+        <activity android:name="com.itheima17.mobileguard.activity.SmsActivity" >
+        </activity>
+        <activity android:name="com.itheima17.mobileguard.activity.LostFindActivity" >
+        </activity>
+        <activity android:name="com.itheima17.mobileguard.activity.AppManagerActivity" >
+        </activity>
+        <activity
+            android:name="com.itheima17.mobileguard.activity.WatchDogPasswordActivity"
+            android:launchMode="singleInstance" >
+        </activity>
+        <activity android:name="com.itheima17.mobileguard.activity.AppLockActivity" >
+        </activity>
+        <activity android:name="com.itheima17.mobileguard.activity.HomeActivity" >
+            <intent-filter>
+                <action android:name="itheima.home" />
+
+                <category android:name="android.intent.category.DEFAULT" >
+                </category>
+            </intent-filter>
+        </activity>
+        <activity android:name="com.itheima17.mobileguard.activity.SettingCenterActivity" >
+        </activity>
+        <activity android:name="com.itheima17.mobileguard.activity.TaskManagerActivity" >
+        </activity>
+        <activity android:name="com.itheima17.mobileguard.activity.PhoneLocationActivity" >
+        </activity>
+        <activity android:name="com.itheima17.mobileguard.activity.ConnectivityActivity" >
+        </activity>
+
+        <!-- receiver -->
+        <receiver android:name="com.itheima17.mobileguard.receiver.BootCompleteReceiver" >
+            <intent-filter>
+
+                <!-- <action android:name="android.provider.Telephony.SMS_RECEIVED"/> -->
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="com.itheima17.mobileguard.receiver.MyDeviceAdminReceiver"
+            android:description="@string/sample_device_admin_description"
+            android:label="@string/sample_device_admin"
+            android:permission="android.permission.BIND_DEVICE_ADMIN" >
+            <meta-data
+                android:name="android.app.device_admin"
+                android:resource="@xml/device_admin_sample" />
+					在res目录创建xml文件夹，并创建device_admin_sample.xml
+            <intent-filter>
+                <action android:name="android.app.action.DEVICE_ADMIN_ENABLED" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.itheima17.mobileguard.receiver.MyAppWidgetProvider" >
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/process_widget_provider" />
+        </receiver>
+        <receiver android:name="com.itheima17.mobileguard.receiver.ClearTaskReceiver" >
+            <intent-filter>
+                <action android:name="itheima.cleartask" />
+            </intent-filter>
+        </receiver>
+
+        <!-- service -->
+        <service android:name="com.itheima17.mobileguard.service.BlackService" >
+        </service>
+        <service android:name="com.itheima17.mobileguard.service.LockScreenService" >
+        </service>
+        <service android:name="com.itheima17.mobileguard.service.WidgetService" >
+        </service>
+        <service android:name="com.itheima17.mobileguard.service.PhoneLocationService" >
+        </service>
+        <service android:name="com.itheima17.mobileguard.service.WatchDogThread" >
+        </service>
+        <service android:name="com.itheima17.mobileguard.service.LostFindService" >
+        </service>
+        <service
+            android:name="com.itheima17.mobileguard.service.WatchDogAccessibility"
+            android:label="@string/accessibility_service_label" >
+            <intent-filter>
+                <action android:name="android.accessibilityservice.AccessibilityService" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.accessibilityservice"
+                android:resource="@xml/accessibility_service_config" />
+        </service>
+    </application>
+
+</manifest>

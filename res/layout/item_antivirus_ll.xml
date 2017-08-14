@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" >
+
+    <ImageView
+        android:layout_marginLeft="10dip"
+        android:id="@+id/iv_item_antivirus_ll_icon"
+        android:layout_width="30dip"
+        android:layout_height="30dip"
+        android:src="@drawable/heima" />
+
+    <TextView
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="10dip"
+        android:id="@+id/tv_item_antivirus_ll_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/iv_item_antivirus_ll_icon"
+        android:text="黑马卫士"
+        android:textSize="20sp" />
+	<ImageView
+	    android:layout_centerVertical="true"
+	    android:layout_marginRight="10dip"
+        android:layout_alignParentRight="true"
+        android:id="@+id/iv_item_antivirus_ll_isVirus"
+        android:layout_width="30dip"
+        android:layout_height="30dip"
+        android:src="@drawable/admin_activated" />
+</RelativeLayout>

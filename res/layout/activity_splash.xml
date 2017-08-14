@@ -1,0 +1,31 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rl_splash_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/splash"
+    tools:context=".SplashActivity" >
+
+    <TextView
+        android:id="@+id/tv_splash_versionname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#ffffffff"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="100dip"
+        android:textSize="20sp"
+        android:layout_alignParentBottom="true"
+        android:text="土豆版" />
+    
+    <TextView
+        android:id="@+id/tv_splash_versioncode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#ffffffff"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="70dip"
+        android:textSize="20sp"
+        android:layout_alignParentBottom="true"
+        android:text="3.0" />
+
+</RelativeLayout>

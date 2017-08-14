@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="#99ccff"
+    android:orientation="vertical" >
+
+    <!-- TextView -->
+
+    <TextView
+        android:clickable="true"
+        android:textColor="#ffffff"
+        android:id="@+id/tv_popup_black_hand"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="3dip"
+        android:drawableLeft="@drawable/dialog_title_default_icon"
+        android:drawablePadding="5dip"
+        android:gravity="center_vertical"
+        android:text="手动添加" />
+
+    <TextView
+        android:clickable="true"
+        android:textColor="#ffffff"
+        android:id="@+id/tv_popup_black_sms"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="3dip"
+        android:drawableLeft="@drawable/dialog_title_default_icon"
+        android:drawablePadding="5dip"
+        android:gravity="center_vertical"
+        android:text="短信添加" />
+
+    <TextView
+        android:clickable="true"
+        android:textColor="#ffffff"
+        android:id="@+id/tv_popup_black_call"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="3dip"
+        android:drawableLeft="@drawable/dialog_title_default_icon"
+        android:drawablePadding="5dip"
+        android:gravity="center_vertical"
+        android:text="通话添加" />
+
+    <TextView
+        android:clickable="true"
+        android:textColor="#ffffff"
+        android:id="@+id/tv_popup_black_friends"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="3dip"
+        android:drawableLeft="@drawable/dialog_title_default_icon"
+        android:drawablePadding="5dip"
+        android:gravity="center_vertical"
+        android:text="好友添加" />
+
+</LinearLayout>

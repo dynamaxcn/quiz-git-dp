@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <!-- 标题 -->
+
+    <TextView
+        style="@style/title_style"
+        android:text="服务号码" />
+
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+
+        <!-- ExpandableListView -->
+
+        <ExpandableListView
+            android:id="@+id/elv_commonservice_showdatas"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" >
+        </ExpandableListView>
+        <!-- 加载进度 -->
+        <include layout="@layout/loading_view"/>
+        
+    </FrameLayout>
+
+</LinearLayout>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <TextView
+        style="@style/title_style"
+        android:text="软件管家" />
+
+    <com.itheima17.mobileguard.view.ProgressMessageView
+        android:id="@+id/pmv_appmanager_rom"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+    </com.itheima17.mobileguard.view.ProgressMessageView>
+
+    <com.itheima17.mobileguard.view.ProgressMessageView
+        android:id="@+id/pmv_appmanager_sd"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+    </com.itheima17.mobileguard.view.ProgressMessageView>
+
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+
+        <ListView
+            android:id="@+id/lv_appmanager_appinfos"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:visibility="gone" >
+        </ListView>
+        <!-- 标签 -->
+
+        <TextView
+            android:clickable="true"
+            android:id="@+id/tv_appmanager_tag"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="#888888"
+            android:text="用户软件"
+            android:textColor="#ffffff" />
+        <!-- 加载进度 -->
+
+        <include layout="@layout/loading_view" />
+    </FrameLayout>
+
+</LinearLayout>

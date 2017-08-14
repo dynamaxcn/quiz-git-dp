@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">MobileGuard</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+     <string name="sample_device_admin">黑马卫士17应用</string>
+    <string name="sample_device_admin_description">黑马卫士17，需要激活设备管理器，才能完成此功能</string>
+    <string name="accessibility_service_label">看门狗Accessibility</string>
+	<string name="accessibility_service_description">启动看门狗，让app访问更安全</string>
+</resources>

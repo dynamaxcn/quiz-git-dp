@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <!-- 标题 -->
+
+    <TextView
+        style="@style/title_style"
+        android:text="添加黑名单数据" />
+    <!-- 黑名单号码 -->
+
+    <EditText
+        android:textColor="#000000"
+        android:id="@+id/et_dialog_black_number"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:hint="输入黑名单号码"
+        android:inputType="number" />
+
+    <!-- 拦截模式 -->
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <CheckBox
+            android:textColor="#000000"
+            android:id="@+id/cb_dialog_black_sms"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="短信拦截" />
+         <CheckBox
+             android:textColor="#000000"
+            android:id="@+id/cb_dialog_black_phone"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="电话拦截" />
+    </LinearLayout>
+    <!-- 添加和取消的按钮 -->
+      <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/bt_dialog_black_add"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/dialog_bt_selector"
+            android:text="添加" />
+         <Button
+            android:id="@+id/bt_dialog_black_cancel"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+             android:background="@drawable/dialog_bt_selector"
+            android:text="取消" />
+    </LinearLayout>
+
+</LinearLayout>

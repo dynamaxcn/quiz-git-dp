@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    >
+
+    <!-- 底部显示进度条 -->
+
+    <ProgressBar
+        android:max="100"
+       android:progress="33"
+        android:id="@+id/pb_progress_text_view"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="20dip"
+        android:progressDrawable="@drawable/progress_horizontal" />
+    <!-- 上面显示文字 -->
+
+    <TextView
+        android:gravity="center_vertical"
+        android:textSize="18sp"
+        android:id="@+id/tv_progress_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#000000"
+        android:text="SD卡可用内存33MB" />
+
+</RelativeLayout>

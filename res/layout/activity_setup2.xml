@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <TextView
+        style="@style/title_style"
+        android:text="2.手机卡的绑定" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="通过绑定sim卡:\n下次重启手机，如果发现sim卡不一致，就个会安全号码发送报警短信" />
+
+    <RelativeLayout
+        android:onClick="bindSim"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/dg_btn_confirm_select" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="点击绑定/解绑sim卡"
+            android:textColor="#ffffff"
+            android:textSize="20sp" />
+
+        <!-- 绑定的标记图片 -->
+
+        <ImageView
+            android:id="@+id/iv_setup2_isbindsim"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="5dip"
+            android:src="@drawable/unlock" />
+    </RelativeLayout>
+    <!-- 4个点 -->
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:orientation="horizontal" >
+
+        <!-- 默认的点 -->
+
+        <View
+            android:layout_width="20dip"
+            android:layout_height="20dip"
+            android:layout_margin="2dip"
+            android:background="@android:drawable/presence_invisible" />
+
+        <!-- 选中的点 -->
+
+        <View
+            android:layout_width="20dip"
+            android:layout_height="20dip"
+            android:layout_margin="2dip"
+            android:background="@android:drawable/presence_online" />
+        <!-- 默认的点 -->
+
+        <View
+            android:layout_width="20dip"
+            android:layout_height="20dip"
+            android:layout_margin="2dip"
+            android:background="@android:drawable/presence_invisible" />
+        <!-- 默认的点 -->
+
+        <View
+            android:layout_width="20dip"
+            android:layout_height="20dip"
+            android:layout_margin="2dip"
+            android:background="@android:drawable/presence_invisible" />
+    </LinearLayout>
+
+    <!-- 相对布局显示图片和下一个 -->
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+
+        <!-- 图片中间 -->
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:src="@drawable/step_2" />
+
+        <ImageButton
+            android:layout_width="60dip"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_margin="5dip"
+            android:background="@drawable/setup_ib_selector"
+            android:onClick="nextPage"
+            android:src="@drawable/next" />
+
+        <ImageButton
+            android:layout_width="60dip"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_margin="5dip"
+            android:background="@drawable/setup_ib_selector"
+            android:onClick="prePage"
+            android:src="@drawable/pre" />
+    </RelativeLayout>
+
+</LinearLayout>

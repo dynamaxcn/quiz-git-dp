@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:itheima="http://schemas.android.com/apk/res/com.itheima17.mobileguard"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+
+        <TextView
+            style="@style/title_style"
+            android:text="进程管家" />
+
+        <!-- 清理的按钮 -->
+
+        <ImageView
+            android:id="@+id/iv_taskmanager_clean"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="5dip"
+            android:layout_alignParentRight="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/bt_cleartask_selector" />
+    </RelativeLayout>
+
+    <com.itheima17.mobileguard.view.ProgressMessageView
+        android:id="@+id/pmv_taskmanager_tasknumber"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+    </com.itheima17.mobileguard.view.ProgressMessageView>
+
+    <com.itheima17.mobileguard.view.ProgressMessageView
+        android:id="@+id/pmv_taskmanager_mem"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+    </com.itheima17.mobileguard.view.ProgressMessageView>
+
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="3" >
+
+        <ListView
+            android:id="@+id/lv_taskmanager_taskinfos"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:visibility="gone" >
+        </ListView>
+        <!-- 标签 -->
+
+        <TextView
+            android:id="@+id/tv_taskmanager_tag"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="#888888"
+            android:clickable="true"
+            android:text="用户软件"
+            android:textColor="#ffffff" />
+        <!-- 加载进度 -->
+
+        <include layout="@layout/loading_view" />
+        <!-- 抽屉菜单 -->
+
+        <SlidingDrawer
+            android:id="@+id/sd_taskmanager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="100dip"
+            android:content="@+id/content"
+            android:handle="@+id/handle" >
+
+            <RelativeLayout
+                android:id="@+id/handle"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/drawer_bg"
+                android:text="Handle" >
+
+                <!-- 添加两个箭头 -->
+
+                <ImageView
+                    android:id="@+id/iv_taskmanager_arraw1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="18dip"
+                    android:src="@drawable/drawer_arrow_up" />
+
+                <ImageView
+                    android:id="@+id/iv_taskmanager_arraw2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/iv_taskmanager_arraw1"
+                    android:layout_centerHorizontal="true"
+                    android:src="@drawable/drawer_arrow_up" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/content"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#ffffff"
+                android:clickable="true"
+                android:orientation="vertical" >
+
+                <!-- 标题 -->
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dip"
+                    android:text="进程管理"
+                    android:textSize="22sp" />
+
+                <com.itheima17.mobileguard.view.SettingCenterItemView
+                    android:id="@+id/sciv_taskmanager_showsystem"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dip"
+                    itheima:bgtype="first"
+                    itheima:desc="显示系统进程" >
+                </com.itheima17.mobileguard.view.SettingCenterItemView>
+
+                <com.itheima17.mobileguard.view.SettingCenterItemView
+                    android:id="@+id/sciv_taskmanager_cleartask"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    itheima:bgtype="last"
+                    itheima:desc="锁屏清理进程" >
+                </com.itheima17.mobileguard.view.SettingCenterItemView>
+            </LinearLayout>
+        </SlidingDrawer>
+    </FrameLayout>
+
+    <!-- 添加2个按钮 -->
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/bt_taskmanager_selectAll"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/dialog_bt_selector"
+            android:text="全选" />
+
+        <Button
+            android:id="@+id/bt_taskmanager_fanselect"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/dialog_bt_selector"
+            android:text="反选" />
+    </LinearLayout>
+
+</LinearLayout>
